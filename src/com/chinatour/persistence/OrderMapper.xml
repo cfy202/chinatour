@@ -1000,14 +1000,14 @@
 						AND PeerUserId !=""
 					</if>
 					<if test="record.peerUserName != null">
-						AND PeerId = #{record.peerUserName,jdbcType=VARCHAR}
+						AND o.PeerId = #{record.peerUserName,jdbcType=VARCHAR}
 					</if>
 					<if test="record.peerUserId != null">
 						AND PeerUserId = #{record.peerUserId,jdbcType=VARCHAR}
 					</if>
-					<if test="record.peerUserName != null">
+					<!-- <if test="record.peerUserName != null">
 						AND PeerUserName LIKE CONCAT('%','${record.peerUserName}','%')
-					</if>
+					</if> -->
 					<if test="record.tourTypeId != null">
 						AND TourTypeId = #{record.tourTypeId,jdbcType=TINYINT}
 					</if>
@@ -2205,16 +2205,21 @@
 	<update id="updateTourOrdersByOrdersTotalId">
 		UPDATE orders
 		SET PeerId = #{peerId,jdbcType=VARCHAR},
-		OrderType = #{orderType,jdbcType=INTEGER},
-		Contact = #{contact,jdbcType=VARCHAR}
+		<if test="contact != null">
+			Contact = #{contact,jdbcType=VARCHAR},
+		</if>
+		OrderType = #{orderType,jdbcType=INTEGER}
 		WHERE OrdersTotalId = #{ordersTotalId,jdbcType=VARCHAR}
 		AND OrderType != 5
 	</update>
 
 	<update id="updateSingleOrdersByOrdersTotalId">
 		UPDATE orders
-		SET PeerId = #{peerId,jdbcType=VARCHAR},
-		Contact = #{contact,jdbcType=VARCHAR}
+		SET 
+		<if test="contact != null">
+			Contact = #{contact,jdbcType=VARCHAR},
+		</if>
+		PeerId = #{peerId,jdbcType=VARCHAR}
 		WHERE OrdersTotalId =
 		#{ordersTotalId,jdbcType=VARCHAR}
 		AND OrderType = 5

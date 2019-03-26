@@ -73,7 +73,7 @@
 							</span>
 						</td>
 						<td width="37%">
-							<input class="form-control" name="customer.lastName" onblur="customerListen();" id="lastNameId" onkeyup="this.value = this.value.toUpperCase();" required type="text">
+							<input class="form-control" name="customer.lastName" onblur="customerListen();" id="lastNameId" required type="text">
 						</td>
 						<td width="13%">
 							<span>
@@ -81,7 +81,7 @@
 							</span>
 						</td>
 						<td width="37%">
-							<input class="form-control" name="customer.firstName" onblur="customerListen();" id="firstNameId" onkeyup="this.value = this.value.toUpperCase();" required type="text">
+							<input class="form-control" name="customer.firstName" onblur="customerListen();" id="firstNameId" required type="text">
 						</td>
 					</tr>
 					<tr>
@@ -91,7 +91,7 @@
 							</span>
 						</td>
 						<td width="37%">
-							<input class="form-control" name="customer.middleName" onkeyup="this.value = this.value.toUpperCase();" required type="text">
+							<input class="form-control" name="customer.middleName" required type="text">
 						</td>
 						<td>
 							<span>
@@ -298,7 +298,7 @@
 							</span>
 						</td>
 						<td width="37%"> <!--没有修改客人 权限 只有office有权限-->
-							<input id="lastNameInput" class="form-control" name="customer.lastName" onkeyup="this.value = this.value.toUpperCase();" required type="text">
+							<input id="lastNameInput" class="form-control" name="customer.lastName" required type="text">
 						</td>
 						<td width="13%">
 							<span>
@@ -306,7 +306,7 @@
 							</span>
 						</td>
 						<td width="37%">
-							<input id="firstNameInput" class="form-control" name="customer.firstName" onkeyup="this.value = this.value.toUpperCase();" required type="text">
+							<input id="firstNameInput" class="form-control" name="customer.firstName" required type="text">
 						</td>
 					</tr>
 					<tr>
@@ -316,7 +316,7 @@
 							</span>
 						</td>
 						<td width="37%">
-							<input id="middleNameInput" class="form-control" name="customer.middleName" onkeyup="this.value = this.value.toUpperCase();" required type="text">
+							<input id="middleNameInput" class="form-control" name="customer.middleName" required type="text">
 						</td>
 						<td>
 							<span>

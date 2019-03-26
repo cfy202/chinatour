@@ -58,7 +58,7 @@
 	<div class="w1">
     	<ul class="nav_main">
         	<li><a [#if menuId=="1000"]class="nav_current"[/#if] href="[@spring.url '/index.jsp'/]">Home</a></li>
-            <li><a [#if menuId=="1001"]class="nav_current"[/#if] href="${base}/admin/peerUser/add.jhtml?area=文景假期(Cruises)&degree=超值特价&tourName=2018">Tours</a></li>
+            <li><a [#if menuId=="1001"]class="nav_current"[/#if] href="${base}/admin/peerUser/add.jhtml?area=文景假期(Cruises)&degree=超值特价&tourName=2019">Tours</a></li>
             <li><a [#if menuId=="1002"]class="nav_current"[/#if] href="${base}/admin/peerUser/list.jhtml">My Booking</a></li>
             <li><a [#if menuId=="1003"]class="nav_current"[/#if] href="${base}/admin/peerUser/commission.jhtml"  >Statement</a></li>
             <li><a [#if menuId=="1004"]class="nav_current"[/#if] href="[@spring.url '/about_us.jsp'/]">About Us</a></li>

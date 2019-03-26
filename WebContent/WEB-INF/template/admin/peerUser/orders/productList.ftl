@@ -102,8 +102,8 @@
 	            <div class="fl" style="margin:10px;">
 	                <ul class="tours_country">
 	                	<li class="tours_c" style="padding: 0px;color:#ff0000;margin-left:30px">Year：</li>
-	                	<!--<li [#if groupLine.tourName=="2017"]class="tours_c tours_check"[#else]class="tours_c" style="color:#018ddf"[/#if] onclick="searYear('2017');" id="2017Year">2017（2017年3月-2018年2月）</li>-->
-	                	<li [#if groupLine.tourName=="2018"]class="tours_c tours_check"[#else]class="tours_c" style="color:#018ddf"[/#if] onclick="searYear('2018');" id="2018Year">2018（2018年3月-2019年2月）</li>
+	                	<!-- <li [#if groupLine.tourName=="2018"]class="tours_c tours_check"[#else]class="tours_c" style="color:#018ddf"[/#if] onclick="searYear('2018');" id="2018Year">2018（2018年3月-2019年2月）</li> -->
+						<li [#if groupLine.tourName=="2019"]class="tours_c tours_check"[#else]class="tours_c" style="color:#018ddf"[/#if] onclick="searYear('2019');" id="2019Year">2019（2019年3月-2020年2月）</li>
 	                	<input id="tourName" type="hidden" value="${groupLine.tourName}">
 	                </ul>
 	            </div>
@@ -323,10 +323,10 @@ $(".from_choice span").click(function(){
 $(function(){
 
 	var tourName=$("#tourName").val();
-	if(tourName==2017){
-		$("#2017Year").attr("class","tours_c tours_check");
-	}else{
+	if(tourName==2018){
 		$("#2018Year").attr("class","tours_c tours_check");
+	}else{
+		$("#2019Year").attr("class","tours_c tours_check");
 	}
 	$("#beginDate").datepicker({dateFormat: 'yy-mm-dd',changeYear: true,changeMonth: true});
 	$("#endDate").datepicker({dateFormat: 'yy-mm-dd',changeYear: true,changeMonth: true});

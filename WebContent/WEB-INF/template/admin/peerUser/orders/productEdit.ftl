@@ -1748,17 +1748,15 @@ $(".from_choice span").click(function(){
         			+",Extra Transfer:9:"+$("#ps").text()+":1"+",Adult Commission:10:"+$("#compax").text()+":"+$("#compaxdiv").text()
         			+",Child Commission:11:"+$("#childcompax").text()+":"+$("#childcompaxdiv").text();
         $("#feeItems").val(itemJson);
-    	var recordRemark=$("#recordRemark").val();
-    	$("#recodsRemark").val(recordRemark);
-    	if($.trim(recordRemark)!=''){
-    		$.ajax({
+    	$("#recodsRemark").val($("#recordRemark").val());
+    	$.ajax({
                 cache: true,
                 type: "POST",
                 url:"tourOrderUpdate.jhtml",
                 data:$('#ww').serialize(),// 你的formid
                 async: false,
                 error: function(request) {
-                   alert("Booking NO: "+$("#orderNumber").val()+" Modify Failure ");
+                    alert("Booking NO: "+$("#orderNumber").val()+" Modify Failure ");
                 },
                 success: function(data) {
                    alert("Booking NO: "+$("#orderNumber").val()+" Modification ");
@@ -1767,9 +1765,6 @@ $(".from_choice span").click(function(){
                    window.location.href="${base}/admin/peerUser/list.jhtml";
                 }
             });
-    	}else{
-    		alert("Order modify record connot be null.");
-    	}
     }
 	   
     /* 将上一个客人的信息复制到本客人   */
