@@ -18,7 +18,6 @@ public class DeleteFileUtil {
         File file = new File(fileName);    
         File aString=file.getAbsoluteFile();
         if(!file.exists()){    
-            System.out.println("删除文件失败："+fileName+"文件不存在");    
             return false;    
         }else{    
             if(file.isFile()){    
@@ -39,10 +38,8 @@ public class DeleteFileUtil {
         File file = new File(fileName);    
         if(file.isFile() && file.exists()){    
             file.delete();    
-            System.out.println("删除单个文件"+fileName+"成功！");    
             return true;    
         }else{    
-            System.out.println("删除单个文件"+fileName+"失败！");    
             return false;    
         }    
     }    
@@ -60,7 +57,6 @@ public class DeleteFileUtil {
         File dirFile = new File(dir);    
         //如果dir对应的文件不存在，或者不是一个目录，则退出    
         if(!dirFile.exists() || !dirFile.isDirectory()){    
-            System.out.println("删除目录失败"+dir+"目录不存在！");    
             return false;    
         }    
         boolean flag = true;    
@@ -84,16 +80,13 @@ public class DeleteFileUtil {
         }    
              
         if(!flag){    
-            System.out.println("删除目录失败");    
             return false;    
         }    
              
         //删除当前目录    
         if(dirFile.delete()){    
-            System.out.println("删除目录"+dir+"成功！");    
             return true;    
         }else{    
-            System.out.println("删除目录"+dir+"失败！");    
             return false;    
         }    
     }    
@@ -151,8 +144,6 @@ public class DeleteFileUtil {
         DeleteFileUtil.delete(fileDir);   
         DeleteFileUtil t = new DeleteFileUtil();
         delFolder("c:/bb");
-        System.out.println("deleted");
- 
              
     }    
 }  

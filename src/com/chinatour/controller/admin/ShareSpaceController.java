@@ -153,7 +153,6 @@ public class ShareSpaceController extends BaseController {
 			throws IOException {
 
 		if (file.isEmpty()) {
-			System.out.println("文件未上传");
 		} else {
 			shareSpace.setShareName(file.getOriginalFilename());
 			shareSpace.setShareSpaceId(UUIDGenerator.getUUID());
@@ -161,33 +160,10 @@ public class ShareSpaceController extends BaseController {
 			shareSpace.setModifyDate(new Date());
 			shareSpace.setUserId(adminService.getCurrent().getId());
 
-			/**
-			 * Setting setting = SettingUtils.get(); String uploadPath =
-			 * setting.getFileUploadPath(); Map<String, Object> model = new
-			 * HashMap<String, Object>(); model.put("uuid",
-			 * UUID.randomUUID().toString()); String realPath = null; try {
-			 * String path = FreemarkerUtils.process(uploadPath, model);
-			 * realPath = path + file.getOriginalFilename(); } catch
-			 * (TemplateException e) { // TODO Auto-generated catch block
-			 * e.printStackTrace(); }
-			 **/
 			String fileString = fileService.uploadLocal(FileType.sharePath,file);
 			shareSpace.setShareUrl(fileString);
 			shareSpace.setServerIp(Constant.SERVERIP);
 			shareSpaceService.save(shareSpace);
-			/*
-			 * System.out.println("文件长度: " + file.getSize());
-			 * System.out.println("文件类型: " + file.getContentType());
-			 * System.out.println("文件名称: " + file.getName());
-			 * System.out.println("文件原名: " + file.getOriginalFilename());
-			 * System.out.println("========================================");
-			 */
-			// 如果用的是Tomcat服务器，则文件会上传到\\%TOMCAT_HOME%\\webapps\\YourWebProject\\WEB-INF\\upload\\文件夹中
-			// String realPath =
-			// request.getSession().getServletContext().getRealPath("/WEB-INF/upload");
-			// 这里不必处理IO流关闭的问题，因为FileUtils.copyInputStreamToFile()方法内部会自动把用到的IO流关掉，我是看它的源码才知道的
-			// FileUtils.copyInputStreamToFile(file.getInputStream(), new
-			// File(realPath, file.getOriginalFilename()));
 		}
 		model.addAttribute("shareTypeId", shareTypeId);
 		return "redirect:shareSpaceList.jhtml";

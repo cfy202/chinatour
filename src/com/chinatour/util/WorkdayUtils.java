@@ -252,7 +252,7 @@ public class WorkdayUtils {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		WorkdayUtils workdayUtils = new WorkdayUtils();
 		Date date = workdayUtils.getWorkday(format.parse("2013-12-27"), 3);
-		System.out.println(format.format(date));
-		System.out.println(workdayUtils.getWorkdayCount(new Date(), format.parse("2013-12-30")));
+		/*System.out.println(format.format(date));
+		System.out.println(workdayUtils.getWorkdayCount(new Date(), format.parse("2013-12-30")));*/
 	}
 }

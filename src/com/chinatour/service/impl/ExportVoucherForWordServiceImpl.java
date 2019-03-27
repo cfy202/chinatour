@@ -255,7 +255,6 @@ public class ExportVoucherForWordServiceImpl implements  ExportVoucherForWordSer
 		    SimpleDateFormat sdf = new SimpleDateFormat("MM");
 		    Date date1 = sdf.parse(str);
 		    sdf = new SimpleDateFormat("MMMMM",Locale.US);
-		    //System.out.println(sdf.format(date1));
 		    arriveTime = dates[0]+" "+sdf.format(date1)+" "+dates[2];
 			Cell arriveDate = new Cell(new Paragraph("Tour Date:	"+arriveTime,contextFontForTittle));
 			arriveDate.setBorder(0);

@@ -614,7 +614,6 @@ public class TourController extends BaseController {
 			HashSet<String> receiveUser= new HashSet<String>();
 			if(orders.size()!=0){
 				for(Order order:orders){
-					System.out.println(order.getUserId());
 					receiveUser.add(order.getUserId());
 				}
 				NoticeContact noteContact=new NoticeContact();

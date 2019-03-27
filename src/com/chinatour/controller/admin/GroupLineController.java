@@ -879,7 +879,6 @@ public class GroupLineController extends BaseController {
 	     while(c_begin.before(c_end)){
 	    	 if(weekList[0].equals("e")){
 	    		 list.add(new java.sql.Date(c_begin.getTime().getTime()).toString());
-	    		 System.out.println("******************weekList[0]**********weekList[0]="+weekList[0]);
 	    	 }else{
 	    		 for(int i=0;i<weekList.length;i++){
 		    		 if(weeks[c_begin.get(Calendar.DAY_OF_WEEK)].equals(weekList[i])){
@@ -923,7 +922,6 @@ public class GroupLineController extends BaseController {
 		//Session防止用户重复提交
 		HttpSession session =request.getSession();
 		session.setAttribute("ageOfPriceSession", "PriceSessionCheck");
-		System.out.println(session.getAttribute("ageOfPriceSession"));
 		GroupLine groupLine=groupLineService.findById(groupLineId);
 		String[] depar=groupLine.getDepartureDate().split(",");
 		Arrays.sort(depar);
@@ -957,7 +955,6 @@ public class GroupLineController extends BaseController {
 		
 		//验证用户是否重复提交
 		String ageOfpriceSession=(String) request.getSession().getAttribute("ageOfPriceSession");
-		System.out.println(request.getSession().getAttribute("ageOfPriceSession"));
 		if(ageOfpriceSession==""||ageOfpriceSession==null){
 			return BaseTemplateURL + "/addTime";
 		}
@@ -970,7 +967,6 @@ public class GroupLineController extends BaseController {
 				groupLine.setTime("");
 			}
 			list=getWeekDays(beginningDate, Endtime,time);
-			System.out.println("******************getWeekDays**********List="+list);
 			if(list.size()>0){
 				for(int a=0;a<list.size();a++){
 					if(a==0){
@@ -1044,7 +1040,6 @@ public class GroupLineController extends BaseController {
 		ageOfPriceService.batchSave(ageOfPriceList);
 		//移除Session
 		request.getSession().removeAttribute("ageOfPriceSession");
-		System.out.println(request.getSession().getAttribute("ageOfPriceSession"));
 		if(adminService.getCurrent().getUsername()=="Admin"){
 			return "redirect:addTime.jhtml?groupLineId="+groupLineId;
 		}

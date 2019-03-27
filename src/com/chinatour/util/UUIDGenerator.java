@@ -39,10 +39,10 @@ public class UUIDGenerator {
 	}
 	
 	public static void main(String[] args){
-		System.out.println("52个UUID分别是：");		
+		/*System.out.println("52个UUID分别是：");		
 		for(int i=0;i<52;i++){
 			System.out.println(UUIDGenerator.getUUID());
-		}
+		}*/
 	}
 }
 

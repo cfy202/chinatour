@@ -213,19 +213,9 @@ public class EnquiryItemsExcel {
 		return sh;
 	}
 
-	/*public static void createCustomer(HSSFWorkbook wb, OutputStream os) {
-		try {
-			EnquiryItemsExcel.save(wb, os);
-			//System.out.println("文件创建完成！");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}*/
-
 	public static void createCustomer(Document document,OutputStream os) {
 		try {
 			EnquiryItemsExcel.save(document, os);
-			//System.out.println("文件创建完成！");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

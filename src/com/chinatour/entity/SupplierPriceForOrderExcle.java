@@ -76,9 +76,7 @@ public class SupplierPriceForOrderExcle extends AbstractExcelView {
     	  HSSFCellStyle currencyStyle = workbook.createCellStyle(); 
     	  currencyStyle.setDataFormat((short)4);
 	        for(int i=0;i<airList.size();i++){
-	        	//System.out.println(i+"times");
         		SupplierPriceForOrder spfo= airList.get(i);
-        		//System.out.println(spfo.getInvoiceNum());
         		HSSFRow rowHd=sheet.createRow(i+2);
         		HSSFCell cell0 = rowHd.createCell(0); 
 		        setText(cell0, spfo.getDate()==null?"":simpleDateFormat.format(spfo.getDate()));

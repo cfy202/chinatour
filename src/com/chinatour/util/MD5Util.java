@@ -32,7 +32,7 @@ public class MD5Util {
     }
 
     public static void main(String[] args) {
-        System.out.print(MD5Util.MD5("1"));
-        System.out.println("*******size***********" + MD5Util.MD5("1").length());
+        /*System.out.print(MD5Util.MD5("1"));
+        System.out.println("*******size***********" + MD5Util.MD5("1").length());*/
     }
 }

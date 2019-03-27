@@ -334,7 +334,6 @@ public class OderToPdfServiceImpl implements OrderToPdfService,ServletContextAwa
 				    SimpleDateFormat sdf = new SimpleDateFormat("MM");
 				    Date date1 = sdf.parse(str);
 				    sdf = new SimpleDateFormat("MMMMM",Locale.US);
-				    //System.out.println(sdf.format(date1));
 				    arriveTime = dates[0]+" "+sdf.format(date1)+" "+dates[2];
 					PdfPCell arriveDate = new PdfPCell(new Paragraph("Tour Date:	"+arriveTime,norm_fontEng));
 					arriveDate.setBorder(0);
@@ -977,7 +976,6 @@ public class OderToPdfServiceImpl implements OrderToPdfService,ServletContextAwa
 				    SimpleDateFormat sdf = new SimpleDateFormat("MM");
 				    Date date1 = sdf.parse(str);
 				    sdf = new SimpleDateFormat("MMMMM",Locale.US);
-				    //System.out.println(sdf.format(date1));
 				    departureDate = dates[0]+" "+sdf.format(date1)+" "+dates[2];
 					PdfPCell arriveDate = new PdfPCell(new Paragraph("Departure Date:	"+departureDate,norm_fontEng));
 					arriveDate.setBorder(0);
@@ -1615,14 +1613,16 @@ public class OderToPdfServiceImpl implements OrderToPdfService,ServletContextAwa
 					
 					
 					SimpleDateFormat dateFormat=new SimpleDateFormat("dd-MM-yyyy");
-					String departureDate = dateFormat.format(tourInfoForOrder.getScheduleOfArriveTime());
-					String[] dates = departureDate.split("-");
-					String str = dates[1];
-				    SimpleDateFormat sdf = new SimpleDateFormat("MM");
-				    Date date1 = sdf.parse(str);
-				    sdf = new SimpleDateFormat("MMMMM",Locale.US);
-				    //System.out.println(sdf.format(date1));
-				    departureDate = dates[0]+" "+sdf.format(date1)+" "+dates[2];
+					String departureDate="";
+					if(tourInfoForOrder.getScheduleOfArriveTime()!=null){
+						departureDate = dateFormat.format(tourInfoForOrder.getScheduleOfArriveTime());
+						String[] dates = departureDate.split("-");
+						String str = dates[1];
+					    SimpleDateFormat sdf = new SimpleDateFormat("MM");
+					    Date date1 = sdf.parse(str);
+					    sdf = new SimpleDateFormat("MMMMM",Locale.US);
+					    departureDate = dates[0]+" "+sdf.format(date1)+" "+dates[2];
+					}
 					PdfPCell arriveDate = new PdfPCell(new Paragraph("Departure Date:	"+departureDate,norm_fontEng));
 					arriveDate.setBorder(0);
 					lineInfo.addCell(arriveDate);
@@ -2274,7 +2274,6 @@ public class OderToPdfServiceImpl implements OrderToPdfService,ServletContextAwa
 				    SimpleDateFormat sdf = new SimpleDateFormat("MM");
 				    Date date1 = sdf.parse(str);
 				    sdf = new SimpleDateFormat("MMMMM",Locale.US);
-				    //System.out.println(sdf.format(date1));
 				    departureDate = dates[0]+" "+sdf.format(date1)+" "+dates[2];
 					PdfPCell arriveDate = new PdfPCell(new Paragraph("Departure Date:	"+departureDate,norm_fontEng));
 					arriveDate.setBorder(0);
@@ -2930,7 +2929,6 @@ public class OderToPdfServiceImpl implements OrderToPdfService,ServletContextAwa
 						    SimpleDateFormat sdf = new SimpleDateFormat("MM");
 						    Date date1 = sdf.parse(str);
 						    sdf = new SimpleDateFormat("MMMMM",Locale.US);
-						    //System.out.println(sdf.format(date1));
 						    departureDate = dates[0]+" "+sdf.format(date1)+" "+dates[2];
 							PdfPCell arriveDate = new PdfPCell(new Paragraph("Departure Date:	"+departureDate,norm_fontEng));
 							arriveDate.setBorder(0);
@@ -3843,7 +3841,6 @@ public class OderToPdfServiceImpl implements OrderToPdfService,ServletContextAwa
 						    SimpleDateFormat sdf = new SimpleDateFormat("MM");
 						    Date date1 = sdf.parse(str);
 						    sdf = new SimpleDateFormat("MMMMM",Locale.US);
-						    //System.out.println(sdf.format(date1));
 						    departureDate = dates[0]+" "+sdf.format(date1)+" "+dates[2];
 							PdfPCell arriveDate = new PdfPCell(new Paragraph("Departure Date:	"+departureDate,norm_fontEng));
 							arriveDate.setBorder(0);

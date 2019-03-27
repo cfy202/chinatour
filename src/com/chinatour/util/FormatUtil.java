@@ -240,7 +240,6 @@ public class FormatUtil {
 			
 		    DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		    str=formatter.format(diff);
-//			System.out.println(diff+"*********====********"+formatter.format(diff));	
 		}catch(Exception e){
 			e.printStackTrace();
 		}
