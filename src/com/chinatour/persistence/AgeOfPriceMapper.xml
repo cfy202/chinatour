@@ -373,7 +373,7 @@
      	<foreach collection="list" item="item" index="index" separator="," >
      	    (
                 #{item.ageOfPriceId},
-                #{item.departureTime,jdbcType=TIMESTAMP} ,
+                #{item.departureTime,jdbcType=TIMESTAMP},
                 #{item.currencyId,jdbcType=VARCHAR},
                 #{item.groupLineId,jdbcType=VARCHAR}, 
                 #{item.adult,jdbcType=DECIMAL},
