@@ -32,14 +32,15 @@ public class BusinessFlowOfGlobalExcle  extends AbstractExcelView{
 	private AccountSubjectMapper accountSubjectMapper;
 	@JsonProperty
 	private String tableTittle = "CTS - Los Angeles Monthly Profit & Loss 文景假期月报表";
+	private String datastr="2019";
 	@JsonProperty
-	private String tittle1 = "2018- Net Income Summary ( Jan.- Dec. )";
+	private String tittle1 = datastr+"- Net Income Summary ( Jan.- Dec. )";
 	@JsonProperty
-	private String tittle2 = "2018- Net Cost & Expense Summary ( Jan.- Dec. )";
+	private String tittle2 = datastr+"- Net Cost & Expense Summary ( Jan.- Dec. )";
 	@JsonProperty
-	private String tittle3 = "2018- Sales Income Summary ( Jan.- Dec. )";
+	private String tittle3 = datastr+"- Sales Income Summary ( Jan.- Dec. )";
 	@JsonProperty
-	private String tittle4 = "2018- Tour Cost & Expense Summary ( Jan.- Dec. )";
+	private String tittle4 = datastr+"- Tour Cost & Expense Summary ( Jan.- Dec. )";
 	@JsonProperty
 	private String[] tableHeader1 = new String[] {"Gross Profit","Jan.","Feb.","Mar.","Apr.","May.","June.","Jul.","Aug.","Sep.","Oct.","Nov.","Dec.","Total","Percent"};
 	private String[] tableHeader2 = new String[] {"Expense","Jan.","Feb.","Mar.","Apr.","May.","June.","Jul.","Aug.","Sep.","Oct.","Nov.","Dec.","Total","Percent"};

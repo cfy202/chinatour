@@ -367,7 +367,7 @@
 	
 	<insert id="batchSave" parameterType="java.util.List">
 	     INSERT INTO age_of_price
-	     (AgeOfPriceId,DepartureTime,CurrencyId,GroupLineId,Adult,CreateTime,Bed,NotBed,Children,Baby,Commission,HotelPrice,
+	     (AgeOfPriceId,DepartureTime,CurrencyId,GroupLineId,Adult,Bed,NotBed,Children,Baby,Commission,HotelPrice,
 	     Supplement,ChildComm)
 	     values 
      	<foreach collection="list" item="item" index="index" separator="," >
@@ -377,7 +377,6 @@
                 #{item.currencyId,jdbcType=VARCHAR},
                 #{item.groupLineId,jdbcType=VARCHAR}, 
                 #{item.adult,jdbcType=DECIMAL},
-                #{item.createTime,jdbcType=TIMESTAMP} ,
                 #{item.bed,jdbcType=DECIMAL},
                 #{item.notBed,jdbcType=DECIMAL} ,
                 #{item.children,jdbcType=DECIMAL},
