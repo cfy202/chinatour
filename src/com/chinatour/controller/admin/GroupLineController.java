@@ -937,7 +937,13 @@ public class GroupLineController extends BaseController {
 		AgeOfPrice ageOfPrice=new AgeOfPrice();
 		ageOfPrice.setGroupLineId(groupLineId);
 //		ageOfPrice.setDepartureTime(new Date());
-		List<AgeOfPrice> list=ageOfPriceService.findOrderByCurrencyId(ageOfPrice);
+		List<AgeOfPrice> list = new ArrayList<AgeOfPrice>();
+		try {
+			list = ageOfPriceService.findOrderByCurrencyId(ageOfPrice);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		model.addAttribute("list",list);
 		model.addAttribute("size",list.size());
 		model.addAttribute("menuId", 813);

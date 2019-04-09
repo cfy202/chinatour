@@ -47,7 +47,7 @@ public class AgeOfPriceServiceImpl extends BaseServiceImpl<AgeOfPrice,String> im
 	}
 
 	@Override
-	public List<AgeOfPrice> findOrderByCurrencyId(AgeOfPrice ageOfPrice) {
+	public List<AgeOfPrice> findOrderByCurrencyId(AgeOfPrice ageOfPrice) throws Exception{
 		return ageOfPriceMapper.findOrderByCurrencyId(ageOfPrice);
 	}
 

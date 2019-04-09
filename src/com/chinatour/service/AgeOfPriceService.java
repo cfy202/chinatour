@@ -30,7 +30,7 @@ public interface AgeOfPriceService extends BaseService<AgeOfPrice, String> {
 	/**
 	 * 根据当前时间查找最近时间的价格
 	 * */
-	List<AgeOfPrice> findOrderByCurrencyId(AgeOfPrice ageOfPrice);
+	List<AgeOfPrice> findOrderByCurrencyId(AgeOfPrice ageOfPrice) throws Exception;
 	/**
 	 * 查找出不同币种，不同价格的最大最小时间 
 	 * */

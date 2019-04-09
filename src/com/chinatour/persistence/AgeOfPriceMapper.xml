@@ -20,7 +20,7 @@
 		<result property="days" column="Days" jdbcType="INTEGER" />
 		<result property="typeNo" column="TypeNo" jdbcType="INTEGER" />
 		<result property="createTime" column="CreateTime" jdbcType="TIMESTAMP" />
-		<result property="UpdateTime" column="UpdateTime" jdbcType="TIMESTAMP" />
+		<result property="updateTime" column="UpdateTime" jdbcType="TIMESTAMP" />
 		<result property="isAvailable" column="IsAvailable" jdbcType="INTEGER" />
 		<result property="groupLineId" column="GroupLineId" jdbcType="VARCHAR" />
 		<result property="supplement" column="Supplement" jdbcType="DECIMAL" />
