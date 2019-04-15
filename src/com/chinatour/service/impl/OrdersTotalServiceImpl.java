@@ -241,7 +241,7 @@ public class OrdersTotalServiceImpl extends BaseServiceImpl<OrdersTotal,String> 
 					case 0: 
 					case 2: 
 					case 3: 
-					case 4: customerOrderRel.setIsDel(0); break;
+					case 4: customerOrderRel.setIsDel(5); break;
 					case 5: 
 					case 6: 
 					case 7: customerOrderRel.setIsDel(1);
@@ -328,7 +328,7 @@ public class OrdersTotalServiceImpl extends BaseServiceImpl<OrdersTotal,String> 
 					case 0: 
 					case 2: 
 					case 3: 
-					case 4: customerOrderRel.setIsDel(0); break;
+					case 4: customerOrderRel.setIsDel(5); break;
 					case 5: 
 					case 6: 
 					case 7: customerOrderRel.setIsDel(1);
