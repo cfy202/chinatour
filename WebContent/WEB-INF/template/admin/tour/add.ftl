@@ -35,7 +35,7 @@
             <h3>New Tour Info</h3>
           </div>
           <div class="content">
-             <form class="form-horizontal group-border-dashed" id="formId" action="addOrders.jhtml" method="post" parsley-validate novalidate>     
+             <form class="form-horizontal group-border-dashed" id="formId" action="addOrders.jhtml" method="post" parsley-validate novalidate onsubmit="return disabledSubmit();">     
               <input type="hidden" name="orderIds" value="${orderIds}">
               <input id="tourId" type="hidden" name="tourId">
 			  <div class="form-group">				
@@ -100,7 +100,7 @@
                 <div class="col-sm-offset-2 col-sm-10">
                   <button type="button" onclick="redirect(1)" class="btn btn-default">Cancel</button>
                   <button type="reset" class="btn btn-default">Reset</button>
-                  <button type="submit" class="btn btn-primary" onclick="submit();" style="margin-left:206px;">Group</button>
+                  <button id="submit" type="submit" class="btn btn-primary" onclick="submit();" style="margin-left:206px;">Group</button>
                 </div>
               </div>
             </form>
@@ -118,10 +118,20 @@
     	$("#defaultType").click();
     });
     
+    var dbClickFlag = true;
     /* 提交表单  */
     function submit(){
     	$("#formId").submit();
     }
+    
+    function disabledSubmit(){
+			$("#submit").attr("disabled",true);
+            if(dbClickFlag){
+                dbClickFlag = false;
+                return true;
+            }
+            return dbClickFlag;
+	}
     
     /* 判断团号是否存在   */
     function checkTourCode(tourCodeInput){
