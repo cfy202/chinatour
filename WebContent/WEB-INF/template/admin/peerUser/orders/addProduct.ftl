@@ -100,14 +100,14 @@
 				                	[#if groupLine.ticket==0 ]
 					                	<div class="date_d fl">
 					                    	<label style="width:200px">Date Arrive In Destination<b style="color:red;">*</b>:</label>
-					                        <input id="departureDateInput" type="text" disable="disable" required="required" name="productVO.tourInfoForOrder.departureDate" value="${departureDate}" class="tourDate_d" placeholder="yyyy-mm-dd" onChange="changePrice();"/>
+					                        <input id="departureDateInput" type="text" readonly="readonly" required="required" name="productVO.tourInfoForOrder.departureDate" value="${departureDate}" class="tourDate_d" placeholder="yyyy-mm-dd" onChange="changePrice();"/>
 											<input name="productVO.order.tourTypeId" type="hidden" value="${groupLine.tourTypeId}">
 					                    </div>
 				                    [/#if]
 				                    [#if groupLine.ticket==1 ]
 				                    	<div class="date_d fl">
 					                    	<label>Departure Date<b style="color:red;">*</b>:</label>
-					                        <input id="departureDateInput" type="text" disable="disable" required="required" name="productVO.tourInfoForOrder.departureDate" value="${departureDate}" class="tourDate_d" placeholder="yyyy-mm-dd" onChange="changePrice();"/>
+					                        <input id="departureDateInput" type="text" readonly="readonly" required="required" name="productVO.tourInfoForOrder.departureDate" value="${departureDate}" class="tourDate_d" placeholder="yyyy-mm-dd" onChange="changePrice();"/>
 											<input name="productVO.order.tourTypeId" type="hidden" value="${groupLine.tourTypeId}">
 					                    </div>
 					                    <div class="date_d fl">
