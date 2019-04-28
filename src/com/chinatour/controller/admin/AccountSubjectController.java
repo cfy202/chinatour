@@ -738,6 +738,8 @@ public class AccountSubjectController extends BaseController {
 				bf.setAccountsSum((totalMonthForIncome.size()<=i?new BigDecimal(0.00):totalMonthForIncome.get(i).getAccountsSum()).subtract(totalMonthForCost.size()<=i?new BigDecimal(0.00):totalMonthForCost.get(i).getAccountsSum()));
 				totalMonthlyForProfit.add(bf);
 		}
+		excle.setDatastr(accountDateStr);
+		excle.setDeptstr(dept.getDeptName());
 		excle.setBusinessFlows(businessFlowList);
 		excle.setAccountSubjects(accountSubjectList);
 		excle.setRowsForIncome(rowsForIncome);

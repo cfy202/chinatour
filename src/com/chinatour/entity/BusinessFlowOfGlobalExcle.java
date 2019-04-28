@@ -31,8 +31,11 @@ public class BusinessFlowOfGlobalExcle  extends AbstractExcelView{
 	@Autowired
 	private AccountSubjectMapper accountSubjectMapper;
 	@JsonProperty
-	private String tableTittle = "CTS - Los Angeles Monthly Profit & Loss 文景假期月报表";
-	private String datastr="2019";
+	private String datastr;
+	@JsonProperty
+	private String deptstr;
+/*	@JsonProperty
+	private String tableTittle = "CTS - "+deptstr+" Monthly Profit & Loss 文景假期月报表";
 	@JsonProperty
 	private String tittle1 = datastr+"- Net Income Summary ( Jan.- Dec. )";
 	@JsonProperty
@@ -40,7 +43,7 @@ public class BusinessFlowOfGlobalExcle  extends AbstractExcelView{
 	@JsonProperty
 	private String tittle3 = datastr+"- Sales Income Summary ( Jan.- Dec. )";
 	@JsonProperty
-	private String tittle4 = datastr+"- Tour Cost & Expense Summary ( Jan.- Dec. )";
+	private String tittle4 = datastr+"- Tour Cost & Expense Summary ( Jan.- Dec. )";*/
 	@JsonProperty
 	private String[] tableHeader1 = new String[] {"Gross Profit","Jan.","Feb.","Mar.","Apr.","May.","June.","Jul.","Aug.","Sep.","Oct.","Nov.","Dec.","Total","Percent"};
 	private String[] tableHeader2 = new String[] {"Expense","Jan.","Feb.","Mar.","Apr.","May.","June.","Jul.","Aug.","Sep.","Oct.","Nov.","Dec.","Total","Percent"};
@@ -106,14 +109,14 @@ public class BusinessFlowOfGlobalExcle  extends AbstractExcelView{
 	        row.setHeight((short)(3*200));
 	        //创建第一行第一列
 	        HSSFCell cell11=row.createCell(0);
-	        cell11.setCellValue(tableTittle);
+	        cell11.setCellValue("CTS - "+deptstr+" Monthly Profit & Loss 文景假期月报表");
 	        cell11.setCellStyle(titleStyle);
 	        //创建第二行
 	        row = sheet.createRow(1);
 	        row.setHeight((short)(3*160));
 	        sheet.addMergedRegion(new CellRangeAddress(1, 1, 0, 17));
 	        HSSFCell cell21=row.createCell(0);
-	        cell21.setCellValue(tittle3);
+	        cell21.setCellValue(datastr+"- Sales Income Summary ( Jan.- Dec. )");
 	        cell21.setCellStyle(titleStyle);
 	        //创建第三行
 	        row = sheet.createRow(2);
@@ -200,7 +203,7 @@ public class BusinessFlowOfGlobalExcle  extends AbstractExcelView{
 	        row.setHeight((short)(3*160));
 	        sheet.addMergedRegion(new CellRangeAddress(rowsForSalesIncome+5, rowsForSalesIncome+5, 0, 17));
 	        HSSFCell ce21=row.createCell(0);
-	        ce21.setCellValue(tittle4);
+	        ce21.setCellValue(datastr+"- Tour Cost & Expense Summary ( Jan.- Dec. )");
 	        ce21.setCellStyle(titleStyle);
 	        
 	      //创建表头
@@ -286,7 +289,7 @@ public class BusinessFlowOfGlobalExcle  extends AbstractExcelView{
 	        row.setHeight((short)(3*160));
 	        sheet.addMergedRegion(new CellRangeAddress(cellRows+10, cellRows+10, 0, 17));
 	        HSSFCell ce31=row.createCell(0);
-	        ce31.setCellValue(tittle1);
+	        ce31.setCellValue(datastr+"- Net Income Summary ( Jan.- Dec. )");
 	        ce31.setCellStyle(titleStyle);
 	        
 	      //创建表头
@@ -374,7 +377,7 @@ public class BusinessFlowOfGlobalExcle  extends AbstractExcelView{
 	        row.setHeight((short)(3*160));
 	        sheet.addMergedRegion(new CellRangeAddress(cellRows+15, cellRows+15, 0, 17));
 	        HSSFCell ce41=row.createCell(0);
-	        ce41.setCellValue(tittle2);
+	        ce41.setCellValue(datastr+"- Net Cost & Expense Summary ( Jan.- Dec. )");
 	        ce41.setCellStyle(titleStyle);
 	        
 	      //创建表头
