@@ -45,7 +45,7 @@
             <h3>Edit</h3>
           </div>
           <div class="content">
-            <form class="form-horizontal group-border-dashed" action="updatePeerProduct.jhtml" method="post">
+            <form class="form-horizontal group-border-dashed" action="updatePeerProduct.jhtml" method="post" data-parsley-validate novalidate>
               <input type="hidden" name="id" value="${groupLine.id}" class="form-control" required placeholder="Min 6 chars." />
               <div class="form-group">
                 <label class="col-sm-3 control-label">Product Code</label>

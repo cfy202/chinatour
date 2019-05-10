@@ -52,8 +52,10 @@
 		                                  	<th>No.</th>
 		                                  	<th>Qty.</th>
 		                                  	<th>AirLine</th>
+		                                  	<th>Net</th>
 		                                  	<th>ARC</th>
 		                                  	<th>Charge</th>
+		                                  	<th>Bill/Credit</th>
 	                                  		<th>Profit</th>
 	                                  		<th>Class</th>
 	                                  		<th>DES</th>
@@ -209,13 +211,14 @@
                 { "data": "InvoiceNum"},
                 { "data": "quantity"},
                 { "data": "airline"},
+                { "data": "net"},
                 { "data": "tempValue06"},
-           		/*{ "data": "supplierPriceForOrderId",
-					"render":function(data, type, row) {
-						return (row.operatorFee-row.charge).toFixed(2)
-					}
-				},*/
 				{ "data": "charge"},
+				{ "data": "supplierPriceForOrderId",
+					"render":function(data, type, row) {
+						return (row.amount-row.charge).toFixed(2)
+					}
+				},
 				{ "data": "supplierPriceForOrderId",
 					"render":function(data, type, row) {
 						return (row.amount-row.operatorFee).toFixed(2)
@@ -347,10 +350,11 @@
 		var agentId = $("#agentId").val();
 		var tempValue01 = $("#tempValue01").val();
 		var agency = $("#agency").val();
+		var venderId= $("#venderId").val();
 		if(time.indexOf("-")<0){
-			location.href="${base}/admin/statistical/excelForAirItem.jhtml?year="+year+"&deptId="+deptId+"&agentId="+agentId+"&tempValue01="+tempValue01+"&agency="+agency;
+			location.href="${base}/admin/statistical/excelForAirItem.jhtml?year="+year+"&deptId="+deptId+"&agentId="+agentId+"&tempValue01="+tempValue01+"&agency="+agency+"&venderId="+venderId;
 		}else{
-			location.href="${base}/admin/statistical/excelForAirItem.jhtml?time="+time+"&deptId="+deptId+"&agentId="+agentId+"&tempValue01="+tempValue01+"&agency="+agency;
+			location.href="${base}/admin/statistical/excelForAirItem.jhtml?time="+time+"&deptId="+deptId+"&agentId="+agentId+"&tempValue01="+tempValue01+"&agency="+agency+"&venderId="+venderId;
 		}
 	}
 	
@@ -361,10 +365,11 @@
         var agentId = $("#agentId").val();
      	var tempValue01 = $("#tempValue01").val();
      	var agency = $("#agency").val();
+     	var venderId= $("#venderId").val();
         if(time.indexOf("-")<0){
-        	location.href="${base}/admin/statistical/ticketStatisticalPrint.jhtml?year="+year+"&deptId="+deptId+"&agentId="+agentId+"&tempValue01="+tempValue01+"&agency="+agency;
+        	location.href="${base}/admin/statistical/ticketStatisticalPrint.jhtml?year="+year+"&deptId="+deptId+"&agentId="+agentId+"&tempValue01="+tempValue01+"&agency="+agency+"&venderId="+venderId;
         }else{
-        	location.href="${base}/admin/statistical/ticketStatisticalPrint.jhtml?time="+time+"&deptId="+deptId+"&agentId="+agentId+"&tempValue01="+tempValue01+"&agency="+agency;
+        	location.href="${base}/admin/statistical/ticketStatisticalPrint.jhtml?time="+time+"&deptId="+deptId+"&agentId="+agentId+"&tempValue01="+tempValue01+"&agency="+agency+"&venderId="+venderId;
         }
     }
 </script>

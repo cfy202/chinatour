@@ -923,27 +923,31 @@ public class GroupLineController extends BaseController {
 		HttpSession session =request.getSession();
 		session.setAttribute("ageOfPriceSession", "PriceSessionCheck");
 		GroupLine groupLine=groupLineService.findById(groupLineId);
-		String[] depar=groupLine.getDepartureDate().split(",");
-		Arrays.sort(depar);
-		String date=null;
-		for(int a=0;a<depar.length;a++){
-			if(a==0){
-				date=depar[a];
-			}else{
-				date =date+","+depar[a];
+		List<AgeOfPrice> list = new ArrayList<AgeOfPrice>();
+		if(groupLine.getDepartureDate()!=null || !(groupLine.getDepartureDate().equals(""))){
+			String[] depar=groupLine.getDepartureDate().split(",");
+			Arrays.sort(depar);
+			String date=null;
+			for(int a=0;a<depar.length;a++){
+				if(a==0){
+					date=depar[a];
+				}else{
+					date =date+","+depar[a];
+				}
+			}
+			groupLine.setDepartureDate(date);
+			AgeOfPrice ageOfPrice=new AgeOfPrice();
+			ageOfPrice.setGroupLineId(groupLineId);
+//			ageOfPrice.setDepartureTime(new Date());
+			
+			try {
+				list = ageOfPriceService.findOrderByCurrencyId(ageOfPrice);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
-		groupLine.setDepartureDate(date);
-		AgeOfPrice ageOfPrice=new AgeOfPrice();
-		ageOfPrice.setGroupLineId(groupLineId);
-//		ageOfPrice.setDepartureTime(new Date());
-		List<AgeOfPrice> list = new ArrayList<AgeOfPrice>();
-		try {
-			list = ageOfPriceService.findOrderByCurrencyId(ageOfPrice);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		model.addAttribute("list",list);
 		model.addAttribute("size",list.size());
 		model.addAttribute("menuId", 813);
