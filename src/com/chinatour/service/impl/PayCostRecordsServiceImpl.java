@@ -125,6 +125,8 @@ public class PayCostRecordsServiceImpl extends BaseServiceImpl<PayCostRecords, S
 						//只要有一个订单未组团不能申请结算
 						if(order.getState()!=5&&order.getState()!=6){
 							tourS.setAllCheck(2);
+						}else{
+							singleOrdersList.add(order);
 						}
 					}
 					//判断是否有op团订单
