@@ -485,7 +485,11 @@
             }else{
             	sOut +="";
             }*/
-            /*sOut += '<tr><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">Invoice No.:</td><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">'+aData.invoiceNo+'</td></tr>';*/
+            sOut += '<tr><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">Vender:</td><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">';
+            if(aData.supplierName!=null){
+            	sOut +=aData.supplierName;
+            }
+            sOut += '</td></tr>';
             if(aData.tempValue03!="Search OrderNo"){
             	sOut += '<tr><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">Order Number:</td><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">'+aData.tempValue03+'</td></tr>';
             }else{

@@ -31,7 +31,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper=false)
 public class SupplierPriceForOrderExcle extends AbstractExcelView {
 	@JsonProperty
-	private String[] excleTittle = new String[]{"Date","No.","Qty","Ticket #","Air","ARC","Bill/Credit","Charge","Selling","Net","Profit","Remark","Class","DES","PNR","Agent","Card","Dept","Agency","Name"};
+	private String[] excleTittle = new String[]{"Date","No.","Qty","Ticket #","Air","ARC","Bill/Credit","Charge","Selling","Net","Profit","Remark","Class","DES","PNR","Agent","Card","Dept","Agency","Name","Vender","Order Num"};
 	@JsonProperty
 	private List<SupplierPriceForOrder> airList = new ArrayList<SupplierPriceForOrder>();
 	@JsonProperty
@@ -163,6 +163,15 @@ public class SupplierPriceForOrderExcle extends AbstractExcelView {
 		        setText(cell18,spfo.getVenderName());
 		        HSSFCell cell19 = rowHd.createCell(19);
 		        setText(cell19,spfo.getAccRemarkOfOp());
+		        HSSFCell cell20 = rowHd.createCell(20);
+		        setText(cell20,spfo.getSupplierName());
+		        HSSFCell cell21 = rowHd.createCell(21);
+		        if(spfo.getTempValue03().equals("Search OrderNo")){
+		        	setText(cell21,"");
+		        }else{
+		        	setText(cell21,spfo.getTempValue03());
+		        }
+		        
         	}
   	   HSSFRow r=sheet.createRow(airList.size()+3);
 	    HSSFCell c0=r.createCell(0);
@@ -185,6 +194,8 @@ public class SupplierPriceForOrderExcle extends AbstractExcelView {
 	    HSSFCell c17=r.createCell(17);
 	    HSSFCell c18=r.createCell(18);
 	    HSSFCell c19=r.createCell(19);
+	    HSSFCell c20=r.createCell(20);
+	    HSSFCell c21=r.createCell(21);
 	    c0.setCellValue("Total");
 	    c1.setCellValue("");
 	    c2.setCellValue(Double.parseDouble(totalPeople+""));
@@ -211,5 +222,7 @@ public class SupplierPriceForOrderExcle extends AbstractExcelView {
  	 	c17.setCellValue("");
  	 	c18.setCellValue("");
  	 	c19.setCellValue("");
+ 	 	c20.setCellValue("");
+ 	 	c21.setCellValue("");
 	}
 }
