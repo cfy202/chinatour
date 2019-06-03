@@ -80,7 +80,7 @@
 							</ul>
 						</div>
 					</div>
-                                <table class="table table-bordered" id="datatable2">
+                                <table class="table table-bordered" id="datatable2" style="text-align: right;">
                                     <thead>
 	                                    <tr>
 	                                        <th>Office</th>
@@ -104,79 +104,79 @@
 	                                    	[#if statisticalProfit.total.profit!=0]
 	                                    		<tr>
 		                                    		<td style="align:center; vertical-align:middle;" rowspan="5"; colspan="1";><a onclick="showDetails('${statisticalProfit.deptId}');" style="color:#3A5FCD";">${statisticalProfit.deptName}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.jan.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.feb.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.mar.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.apr.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.may.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.jun.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.jul.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.aug.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.sep.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.oct.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.nov.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.dec.salesIncome}</a></td>
-		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.total.salesIncome}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.jan.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.feb.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.mar.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.apr.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.may.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.jun.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.jul.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.aug.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.sep.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.oct.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.nov.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.dec.salesIncome?string('0.00')}</a></td>
+		                                    		<td style="background:#F0FFF0;"><a onclick="showSalesIncomeDetails('${statisticalProfit.deptId}');">${statisticalProfit.total.salesIncome?string('0.00')}</a></td>
 		                                    	</tr>
 		                                    	<tr style="background:#FFF8DC;">
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jan.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.feb.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.mar.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.apr.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.may.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jun.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jul.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.aug.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.sep.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.oct.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.nov.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.dec.tourCost}</a></td>
-		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.total.tourCost}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jan.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.feb.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.mar.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.apr.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.may.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jun.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jul.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.aug.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.sep.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.oct.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.nov.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.dec.tourCost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showTourCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.total.tourCost?string('0.00')}</a></td>
 		                                    	</tr>
 		                                    	<tr style="background:#F0FFF0;">
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jan.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.feb.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.mar.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.apr.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.may.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jun.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jul.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.aug.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.sep.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.oct.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.nov.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.dec.income}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.total.income}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jan.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.feb.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.mar.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.apr.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.may.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jun.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jul.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.aug.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.sep.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.oct.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.nov.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.dec.income?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.total.income?string('0.00')}</a></td>
 		                                    	</tr>
 		                                    	<tr style="background:#FFF8DC;">
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jan.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.feb.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.mar.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.apr.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.may.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jun.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jul.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.aug.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.sep.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.oct.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.nov.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.dec.cost}</a></td>
-		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.total.cost}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jan.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.feb.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.mar.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.apr.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.may.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jun.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.jul.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.aug.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.sep.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.oct.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.nov.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.dec.cost?string('0.00')}</a></td>
+		                                    		<td><a onclick="showCostDetails('${statisticalProfit.deptId}');">${statisticalProfit.total.cost?string('0.00')}</a></td>
 		                                    	</tr>
 		                                    	<tr style="background:#E6E6FA;">
-		                                    		<td>${statisticalProfit.jan.profit}</td>
-		                                    		<td>${statisticalProfit.feb.profit}</td>
-		                                    		<td>${statisticalProfit.mar.profit}</td>
-		                                    		<td>${statisticalProfit.apr.profit}</td>
-		                                    		<td>${statisticalProfit.may.profit}</td>
-		                                    		<td>${statisticalProfit.jun.profit}</td>
-		                                    		<td>${statisticalProfit.jul.profit}</td>
-		                                    		<td>${statisticalProfit.aug.profit}</td>
-		                                    		<td>${statisticalProfit.sep.profit}</td>
-		                                    		<td>${statisticalProfit.oct.profit}</td>
-		                                    		<td>${statisticalProfit.nov.profit}</td>
-		                                    		<td>${statisticalProfit.dec.profit}</td>
-		                                    		<td>${statisticalProfit.total.profit}</td>
+		                                    		<td>${statisticalProfit.jan.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.feb.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.mar.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.apr.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.may.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.jun.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.jul.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.aug.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.sep.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.oct.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.nov.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.dec.profit?string('0.00')}</td>
+		                                    		<td>${statisticalProfit.total.profit?string('0.00')}</td>
 		                                    	</tr>
 		                                    	<tr><td colspan="14" style="height:20px;background:#fff;"></td></tr>
 	                                    	[/#if]

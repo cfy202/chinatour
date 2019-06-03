@@ -114,7 +114,7 @@
 												[#list businessFlowList as businessFlow]
 													[#if businessFlow.accountDateStr==index]
 														[#if accountSubject.accountSubjectId==businessFlow.accountSubjectId]
-															${businessFlow.accountsSum}
+															${businessFlow.accountsSum?if_exists?string('0.00')}
 															<input type="hidden" value="${businessFlow.accountsSum}" name="sumAmount"/>
 														[/#if]
 													[/#if]
@@ -147,7 +147,7 @@
 												[#list businessFlowList as businessFlow]
 													[#if businessFlow.accountDateStr==index]
 														[#if accountSubject.accountSubjectId==businessFlow.accountSubjectId]
-															${businessFlow.accountsSum}
+															${businessFlow.accountsSum?if_exists?string('0.00')}
 															<input type="hidden" value="${businessFlow.accountsSum}" id="${businessFlow_index}_accountsSum" name="sumAmount"/>
 														[/#if]
 													[/#if]
@@ -227,7 +227,7 @@
 												[#list businessFlowList as businessFlow]
 													[#if businessFlow.accountDateStr==index]
 														[#if accountSubject.accountSubjectId==businessFlow.accountSubjectId]
-															${businessFlow.accountsSum}
+															${businessFlow.accountsSum?if_exists?string('0.00')}
 															<input type="hidden" value="${businessFlow.accountsSum}" name="sumAmount"/>
 														[/#if]
 													[/#if]
@@ -260,7 +260,7 @@
 												[#list businessFlowList as businessFlow]
 													[#if businessFlow.accountDateStr==index]
 														[#if accountSubject.accountSubjectId==businessFlow.accountSubjectId]
-															${businessFlow.accountsSum}
+															${businessFlow.accountsSum?if_exists?string('0.00')}
 															<input type="hidden" value="${businessFlow.accountsSum}" id="${businessFlow_index}_accountsSum" name="sumAmount"/>
 														[/#if]
 													[/#if]
@@ -340,7 +340,7 @@
 												[#list businessFlowList as businessFlow]
 													[#if businessFlow.accountDateStr==index]
 														[#if accountSubject.accountSubjectId==businessFlow.accountSubjectId]
-															${businessFlow.accountsSum}
+															${businessFlow.accountsSum?if_exists?string('0.00')}
 															<input type="hidden" value="${businessFlow.accountsSum}" name="sumAmount"/>
 														[/#if]
 													[/#if]
@@ -373,7 +373,7 @@
 												[#list businessFlowList as businessFlow]
 													[#if businessFlow.accountDateStr==index]
 														[#if accountSubject.accountSubjectId==businessFlow.accountSubjectId]
-															${businessFlow.accountsSum}
+															${businessFlow.accountsSum?if_exists?string('0.00')}
 															<input type="hidden" value="${businessFlow.accountsSum}" id="${businessFlow_index}_accountsSum" name="sumAmount"/>
 														[/#if]
 													[/#if]
@@ -451,7 +451,7 @@
 											[#list businessFlowList as businessFlow]
 												[#if businessFlow.accountDateStr==index]
 													[#if accountSubject.accountSubjectId==businessFlow.accountSubjectId]
-														${businessFlow.accountsSum}
+														${businessFlow.accountsSum?if_exists?string('0.00')}
 														<input type="hidden" value="${businessFlow.accountsSum}" class="preAmount" name="sumAmount"/>
 													[/#if]	
 												[/#if]
@@ -484,7 +484,7 @@
 											[#list businessFlowList as businessFlow]
 												[#if businessFlow.accountDateStr==index]
 													[#if accountSubject.accountSubjectId==businessFlow.accountSubjectId]
-														${businessFlow.accountsSum}
+														${businessFlow.accountsSum?if_exists?string('0.00')}
 														<input type="hidden" value="${businessFlow.accountsSum}" id="${businessFlow_index}_accountsSum" class="preAmount" name="sumAmount"/>
 													[/#if]
 												[/#if]
