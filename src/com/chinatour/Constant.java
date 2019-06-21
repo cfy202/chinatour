@@ -25,7 +25,7 @@ public class Constant {
 	 *
 	 *年份
 	 */
-	public static final String[] BRAND_YEAR = new String[] { "2011","2012", "2013", "2014","2015","2016","2017","2018","2019"};
+	public static final String[] BRAND_YEAR = new String[] { "2011","2012", "2013", "2014","2015","2016","2017","2018","2019","2020"};
 	
 	/**
 	 *

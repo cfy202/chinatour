@@ -134,10 +134,12 @@
 													<input type="text" size="14" id="search_agency" placeholder="Agency" />
 													<input type="text" size="14" id="search_invoiceNo" placeholder="Invoice No" />
 													<input type="text" size="14" id="search_orderNo" placeholder="Order Number" />
+													<input type="text" size="14" id="search_supplierName" placeholder="Vendor" />
 													<input type="hidden" size="14" id="search_userName" placeholder="Op..." />
 													<input type="hidden" size="14" id="search_charge" placeholder="Charge..." />
 													<input type="hidden" size="14" id="search_amount" placeholder="Selling..." />
 													<input type="hidden" size="14" id="search_operatorFee" placeholder="Net..." />
+													
 												</div>
 											</div>
 										</div>
@@ -307,6 +309,7 @@
 					data.invoiceNo = $("#search_invoiceNo").val();
 					data.tempValue03 = $("#search_orderNo").val();//订单号
 					data.userName=$("#search_userName").val();
+					data.supplierName=$("#search_supplierName").val();
 				}
             },
             "columns": [
@@ -401,6 +404,12 @@
             	sOut +="";
             }
             sOut += '<tr><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">Invoice No.:</td><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">'+aData.invoiceNo+'</td></tr>';*/
+            
+            sOut += '<tr><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">Vendor:</td><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">';
+            if(aData.supplierName!=null){
+            	sOut +=aData.supplierName;
+            }
+            sOut += '</td></tr>';
             if(aData.tempValue03!="Search OrderNo"){
             	sOut += '<tr><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">Order Number:</td><td style="border-left: 1px solid #DADADA;border-bottom: 1px solid #dadada;">'+aData.tempValue03+'</td></tr>';
             }else{
