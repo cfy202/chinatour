@@ -907,7 +907,7 @@
 		minimumInputLength: 1,	//至少输入n个字符，才去加载数据
 		allowClear: false,	//是否允许用户清除文本信息
 		ajax:{
-			url:'${base}/admin/vender/listSelect.jhtml?type=2',	//地址(type=2供应商，查找type!=2)
+			url:'${base}/admin/vender/listSelect.jhtml?type=1',	//地址(type=2供应商，查找type!=2)
 			dataType:'text',	//接收的数据类型
 			type: "POST",
 			//contentType:'application/json',
