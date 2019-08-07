@@ -839,9 +839,9 @@ public class TourController extends BaseController {
 		Page<Order> page = tourService.findOrderPage(order,pageable);
 		map.put("recordsTotal", page.getTotal());
 		map.put("recordsFiltered", page.getTotal());
-		if(page.getContent().size()>0){
+		/*if(page.getContent().size()>0){
 			page.getContent().add(orderService.findForTourPageTotalPepole(order));
-		}
+		}*/
 		map.put("data", page.getContent());
 		return map;
 	}

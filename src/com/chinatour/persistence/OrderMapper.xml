@@ -2463,12 +2463,13 @@
 				AND v.Name LIKE CONCAT('%','${record.peerId}','%')
 			</if>
 		</where>
-		<if test="record.sorceId == 2">
+		ORDER BY ord.CreateTime DESC
+		<!-- <if test="record.sorceId == 2">
 			ORDER BY FIELD(ord.ReviewState,1,5) DESC,ord.CreateTime DESC
 		</if> 
 		<if test="record.sorceId != 2">
 			ORDER BY ord.CreateTime DESC,ord.State DESC
-		</if> 
+		</if>  -->
 	</sql>
 	
 	<select id="findForGroupPageForAgency" resultMap="BaseResultMapForAgency">
