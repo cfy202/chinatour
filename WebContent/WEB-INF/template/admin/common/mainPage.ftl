@@ -125,18 +125,18 @@
             <div class="content">
             	<i class="fa fa-paperclip pull-right"></i>
                 <p class="news-p" title="关于系统汇率变更通知  ">
-                	<a style="color:red;">关于系统汇率变更通知,2019年9月6日开始执行 </a>
+                	<a style="color:red;">关于系统汇率变更通知,2018年2月22日开始执行 </a>
                 </p>
             	<table>
             		<tr>
             			<td>
 							<div>
-								<p style="margin-left:60px;margin-top:6px;">USD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 7.1</p>
-								<p style="margin-left:60px;margin-top:6px;">CAD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 5.4</p>
-								<p style="margin-left:60px;margin-top:6px;">AUD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 4.8</p>
+								<p style="margin-left:60px;margin-top:6px;">USD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 6.35</p>
+								<p style="margin-left:60px;margin-top:6px;">CAD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 5.15</p>
+								<p style="margin-left:60px;margin-top:6px;">AUD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 5.15</p>
 								<p style="margin-left:60px;margin-top:6px;">EUR : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 7.50</p>
 								<p style="margin-left:60px;margin-top:6px;">GBP : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 8.58</p>
-								<p style="margin-left:60px;margin-top:6px;">USD : AUD&nbsp;&nbsp;&nbsp;&nbsp;  1 : 1.5</p>
+								<p style="margin-left:60px;margin-top:6px;">USD : AUD&nbsp;&nbsp;&nbsp;&nbsp;  1 : 1.30</p>
 								<p style="margin-left:60px;margin-top:6px;">USD : CAD&nbsp;&nbsp;&nbsp;&nbsp;  1 : 1.35</p>
 								<p style="margin-left:60px;margin-top:6px;">USD : EUR&nbsp;&nbsp;&nbsp;&nbsp;  1 : 0.95</p>
 								<p style="margin-left:60px;margin-top:6px;">USD : GBP&nbsp;&nbsp;&nbsp;&nbsp;  1 : 0.81</p>
@@ -146,7 +146,63 @@
             	</table>
             </div>
         </li>
-	
+		<!--
+        <li>
+            <i class="fa fa-comment green"></i>
+            <span class="date">20 Jun</span>
+            <div class="content">
+            	<i class="fa fa-paperclip pull-right"></i>
+                <p class="news-p" title="关于系统汇率变更通知  ">
+                	<a style="color:red;">关于系统汇率变更通知,8月10日开始执行 </a>
+                </p>
+            	<table>
+            		<tr>
+            			<td>
+							<div>
+								<p style="margin-left:60px;margin-top:6px;">USD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 6.70</p>
+								<p style="margin-left:60px;margin-top:6px;">CAD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 5.15</p>
+								<p style="margin-left:60px;margin-top:6px;">AUD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 5.15</p>
+								<p style="margin-left:60px;margin-top:6px;">EUR : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 7.50</p>
+								<p style="margin-left:60px;margin-top:6px;">GBP : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 8.58</p>
+								<p style="margin-left:60px;margin-top:6px;">USD : AUD&nbsp;&nbsp;&nbsp;&nbsp;  1 : 1.30</p>
+								<p style="margin-left:60px;margin-top:6px;">USD : CAD&nbsp;&nbsp;&nbsp;&nbsp;  1 : 1.35</p>
+								<p style="margin-left:60px;margin-top:6px;">USD : EUR&nbsp;&nbsp;&nbsp;&nbsp;  1 : 0.95</p>
+								<p style="margin-left:60px;margin-top:6px;">USD : GBP&nbsp;&nbsp;&nbsp;&nbsp;  1 : 0.81</p>
+							</div>
+						</td>
+					</tr>
+            	</table>
+            </div>
+        </li>
+        
+        <li>
+                <i class="fa fa-comment green"></i>
+                <span class="date">11-29</span>
+                <div class="content">
+                	<i class="fa fa-paperclip pull-right"></i>
+                    <p class="news-p" title="关于系统汇率变更通知  ">
+                    	<a style="color:red;">关于系统汇率变更通知,12月10日开始执行 </a>
+                    </p>
+                	<table>
+                		<tr>
+		                    	<td>
+									<div>
+										<p style="margin-left:60px;margin-top:6px;">USD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 6.90</p>
+										<p style="margin-left:60px;margin-top:6px;">CAD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 5.15</p>
+										<p style="margin-left:60px;margin-top:6px;">AUD : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 5.15</p>
+										<p style="margin-left:60px;margin-top:6px;">EUR : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 7.50</p>
+										<p style="margin-left:60px;margin-top:6px;">GBP : CNY&nbsp;&nbsp;&nbsp;&nbsp;  1 : 8.58</p>
+										<p style="margin-left:60px;margin-top:6px;">USD : AUD&nbsp;&nbsp;&nbsp;&nbsp;  1 : 1.35</p>
+										<p style="margin-left:60px;margin-top:6px;">USD : CAD&nbsp;&nbsp;&nbsp;&nbsp;  1 : 1.34</p>
+										<p style="margin-left:60px;margin-top:6px;">USD : EUR&nbsp;&nbsp;&nbsp;&nbsp;  1 : 0.95</p>
+										<p style="margin-left:60px;margin-top:6px;">USD : GBP&nbsp;&nbsp;&nbsp;&nbsp;  1 : 0.81</p>
+									</div>
+								</td>
+							</tr>
+                	</table>
+                </div>
+            </li>
+            -->
 	  [#list newsList as news]
 	   	 <li>
 	            <i class="fa fa-comment"></i>
