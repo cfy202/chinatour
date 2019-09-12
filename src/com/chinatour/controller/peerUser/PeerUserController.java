@@ -756,9 +756,9 @@ public class PeerUserController  extends com.chinatour.controller.admin.BaseCont
 		Page<TourOrderListVO> page = orderService.findTourOrderListVO(order, pageable);
 		map.put("recordsTotal", page.getTotal());
 		map.put("recordsFiltered", page.getTotal());
-		if(page.getContent().size()>0){
+		/*if(page.getContent().size()>0){ 
 			page.getContent().add(orderService.findOrderSumPepole(order));
-		}
+		}*/
 		map.put("data", page.getContent());
 		return map;
 	}
