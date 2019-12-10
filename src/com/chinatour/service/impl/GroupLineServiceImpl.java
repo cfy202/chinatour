@@ -195,6 +195,11 @@ public class GroupLineServiceImpl extends BaseServiceImpl<GroupLine, String> imp
 	        return new Page<GroupLine>(page, pageCount, pageable);
 		}
 
+		@Override
+		public void delRoute(String id) {
+			groupRouteMapper.removeById(id);
+		}
+
 	/**
 	 * 同行用户产品列表
 	 * *//*

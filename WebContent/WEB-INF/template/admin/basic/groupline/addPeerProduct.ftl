@@ -134,6 +134,7 @@
 						<option value="美国操作中心">美国操作中心</option>
 						<option value="苏州操作中心">苏州操作中心</option>
 						<option value="WJ操作中心">WJ操作中心</option>
+						<option value="SFO操作中心">SFO操作中心</option>
                  	</select>
 				  </div>
 			  </div>

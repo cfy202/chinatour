@@ -60,7 +60,7 @@
 			                <td>The ${hotels.dayNum} Day</td>
 			                <td>
 			                	<i class="fa fa-pencil"></i><a href="editHotel.jhtml?groupLineHotelRelId=${hotels.groupLineHotelRelId}">Edit</a>
-			                	<i class="fa fa-times"></i><a href="delHotel.jhtml?id=${hotels.groupLineHotelRelId}">Delet</a>
+			                	<i class="fa fa-times"></i><a href="delHotel.jhtml?id=${hotels.groupLineHotelRelId}">Delete</a>
 			                </td>
 			            </tr>
 			        [/#list]

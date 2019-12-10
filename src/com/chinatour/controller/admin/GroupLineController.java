@@ -567,6 +567,18 @@ public class GroupLineController extends BaseController {
 	}
 	
 	/**
+	 * 线路行程删除
+	 * 
+	 * @param venderId
+	 * @return
+	 */
+	@RequestMapping(value = "/delGroupRoute", method = RequestMethod.GET)
+	public String delGroupRoute(GroupRoute groupRoute){
+		groupLineService.delRoute(groupRoute.getId());
+		return "redirect:setGroupRoute.jhtml?groupLineId="+groupRoute.getGroupLineId();
+	}
+	
+	/**
 	 * 酒店管理
 	 * @param groupLineId
 	 * @param model

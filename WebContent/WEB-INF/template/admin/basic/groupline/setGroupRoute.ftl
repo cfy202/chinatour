@@ -59,6 +59,7 @@
 				                <td width="10%" style="display:none">${groupRoutes.routeDescribeForUs}</td>
 				                <td width="10%">
 				                	<i class="fa fa-pencil"></i><a href="editGroupRoute.jhtml?id=${groupRoutes.id}">Edit</a>
+				                	<i class="fa fa-times"></i><a href="delGroupRoute.jhtml?id=${groupRoutes.id}&groupLineId=${groupLine.id}">Delete</a>
 				                </td>
 				            </tr>
 			        [/#list]

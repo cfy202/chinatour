@@ -124,6 +124,7 @@
 	                    <option value="美国操作中心" [#if "${groupLine.operater='美国操作中心'}"] selected="selected" [/#if]>美国操作中心</option>
 	                    <option value="澳洲操作中心" [#if "${groupLine.operater='澳洲操作中心'}"] selected="selected" [/#if]>澳洲操作中心</option>
 	                    <option value="WJ操作中心" [#if groupLine.operater?index_of("WJ操作中心")!=-1] selected="selected" [/#if]>WJ操作中心</option>
+						<option value="SFO操作中心" [#if groupLine.operater?index_of("SFO操作中心")!=-1] selected="selected" [/#if]>SFO操作中心</option>
                   </select>
                 </div>
               </div>

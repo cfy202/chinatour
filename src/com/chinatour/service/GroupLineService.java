@@ -43,6 +43,8 @@ public interface GroupLineService extends BaseService<GroupLine, String> {
 	 */
 	void updateRoute(GroupRoute groupRoute);
 	
+	void delRoute(String id);
+	
 	/*
 	 * 通过id查询线路
 	 */
